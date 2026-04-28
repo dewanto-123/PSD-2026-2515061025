@@ -5,16 +5,6 @@ Program ini merupakan simulasi papan permainan Monopoli yang merepresentasikan 4
 
 # Source Code
 
-
-
-
-
-
-
-
-
-
-
 Program dimulai dengan mendefinisikan kelas Node yang memiliki atribut data (nama petak), prev (pointer ke node sebelumnya), dan next (pointer ke node berikutnya). Kemudian kelas DoublyLinkedList dibuat dengan atribut start (node pertama) dan rear (node terakhir). Metode create_new_node(n) hanya membungkus pembuatan objek Node baru. Metode insert_node(new_node) menambahkan node ke akhir DLL: jika list kosong, start dan rear menunjuk ke node baru; jika tidak, node baru dihubungkan dengan rear yang ada, lalu rear diperbarui.
 
 Metode traverse_forward() dan traverse_backward() masing-masing mencetak semua data dari start ke rear (menggunakan next) dan dari rear ke start (menggunakan prev). Metode cari_petak(nama) melakukan pencarian case‑insensitive (hanya cocok sebagian karena menggunakan in) dan mengembalikan node beserta posisinya (1-index). tampilkan_semua() mencetak semua petak bernomor secara rapi.
@@ -24,3 +14,8 @@ Metode gerak_pemain(posisi_awal, langkah) menghitung total node, lalu posisi bar
 Di fungsi main(), objek DLL dibuat dan diisi dengan 40 petak Monopoli standar (daftar petak_monopoli) menggunakan perulangan for. Setelah itu, program memasuki menu interaktif while True yang menawarkan 6 pilihan. Setiap pilihan memanggil metode DLL yang sesuai, menangani input pengguna, dan menampilkan hasil. Pilihan 6 akan menghentikan program. Jika pengguna memasukkan angka di luar 1-6, program akan menjalankan traversal maju sebagai default.
 
 # Output Program
+
+Ketika program dijalankan, pertama-tama akan menampilkan judul "SIMULASI PAPAN MONOPOLI - Doubly Linked List" dengan garis pembatas, kemudian menampilkan menu berisi enam pilihan: tampilkan semua petak, traversal maju, traversal mundur, cari petak, simulasi gerak pemain, dan keluar. Jika pengguna memilih opsi 1, program akan mencetak daftar seluruh 40 petak Monopoli yang telah dimasukkan ke dalam doubly linked list, lengkap dengan nomor urut (1 hingga 40) dan nama petak beserta harga atau keterangannya (misalnya "GO", "Mediterranean Avenue [$60]", hingga "Boardwalk [$400]"), ditutup dengan garis pemisah dan total petak. Opsi 2 akan menampilkan traversal maju dari start ke rear, yaitu seluruh nama petak dicetak berurutan dalam satu baris dengan awalan "Traversal maju (Start → End): ". Opsi 3 sebaliknya, menampilkan traversal mundur dari rear ke start dengan awalan "Traversal mundur (End → Start): ". Opsi 4 meminta pengguna memasukkan nama petak yang dicari; jika ditemukan (misalnya "GO"), program akan menampilkan posisi (nomor urut), data petak tersebut, serta data petak sebelumnya dan sesudahnya (jika ada). Jika tidak ditemukan, program memberi tahu "Petak tidak ditemukan." Opsi 5 meminta posisi awal pemain (1-40) dan jumlah langkah dadu, kemudian menghitung posisi baru dengan konsep papan melingkar (setelah petak ke-40 kembali ke petak 1). Hasilnya menampilkan berapa langkah yang ditempuh dan posisi baru beserta nama petaknya, misalnya "Pemain bergerak 5 langkah. Posisi baru: [5] Income Tax [-$200]". Opsi 6 akan mencetak "Program selesai." dan menghentikan program. Apabila pengguna memasukkan pilihan tidak valid (angka selain 1-6), program akan menjalankan traversal maju sebagai default. Seluruh interaksi berlangsung dalam loop hingga pengguna memilih keluar, sehingga output program bersifat dinamis dan bergantung pada pilihan serta input yang diberikan.
+
+# Link Youtube
+https://youtu.be/FILEA3EnJtQ

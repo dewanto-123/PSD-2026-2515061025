@@ -4,6 +4,16 @@
 Program ini merupakan simulasi papan permainan Monopoli yang merepresentasikan 40 petak (termasuk GO, properti, dll.) menggunakan struktur data Doubly Linked List (DLL). Setiap petak disimpan dalam sebuah node yang memiliki pointer prev dan next, sehingga memungkinkan traversal maju (dari awal ke akhir) maupun mundur (dari akhir ke awal) dengan mudah. Fungsi utama program adalah menampilkan seluruh petak, mencari petak berdasarkan nama, mensimulasikan pergerakan pemain (dengan melewati petak terakhir dan kembali ke GO seperti pada papan melingkar), serta menyediakan menu interaktif bagi pengguna. Algoritma DLL dipilih karena sifatnya yang dinamis dan efisien untuk operasi penyisipan di akhir serta navigasi dua arah, yang sesuai dengan kebutuhan papan Monopoli yang linear namun dapat dianggap melingkar saat pergerakan.
 
 # Source Code
+<img width="668" height="900" alt="Screenshot 2026-04-29 012310" src="https://github.com/user-attachments/assets/5c44e5e7-6509-4a1e-afdd-0d91c23e26cc" />
+<img width="853" height="836" alt="Screenshot 2026-04-29 012331" src="https://github.com/user-attachments/assets/12dafaf8-ba9a-41c6-895d-dfa13ab72c17" />
+<img width="677" height="832" alt="Screenshot 2026-04-29 012412" src="https://github.com/user-attachments/assets/5a077487-ebd8-437b-b0b6-32e583fe5cec" />
+<img width="740" height="836" alt="Screenshot 2026-04-29 012427" src="https://github.com/user-attachments/assets/2777745e-fb89-4992-ab12-22ffc76098d2" />
+<img width="856" height="858" alt="Screenshot 2026-04-29 012453" src="https://github.com/user-attachments/assets/3ec264b8-14ef-43bf-a941-ee7b660ae632" />
+<img width="823" height="493" alt="Screenshot 2026-04-29 012536" src="https://github.com/user-attachments/assets/b1a0d112-b671-4b67-be29-1af94e7acf53" />
+
+
+
+
 
 Program dimulai dengan mendefinisikan kelas Node yang memiliki atribut data (nama petak), prev (pointer ke node sebelumnya), dan next (pointer ke node berikutnya). Kemudian kelas DoublyLinkedList dibuat dengan atribut start (node pertama) dan rear (node terakhir). Metode create_new_node(n) hanya membungkus pembuatan objek Node baru. Metode insert_node(new_node) menambahkan node ke akhir DLL: jika list kosong, start dan rear menunjuk ke node baru; jika tidak, node baru dihubungkan dengan rear yang ada, lalu rear diperbarui.
 

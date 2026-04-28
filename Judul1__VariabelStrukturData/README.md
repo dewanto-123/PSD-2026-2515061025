@@ -1,1 +1,26 @@
+# Program Papan Permainan Monopoly Menggunakan Doubly Linked List 
 
+# Deskripsi Singkat 
+Program ini merupakan simulasi papan permainan Monopoli yang merepresentasikan 40 petak (termasuk GO, properti, dll.) menggunakan struktur data Doubly Linked List (DLL). Setiap petak disimpan dalam sebuah node yang memiliki pointer prev dan next, sehingga memungkinkan traversal maju (dari awal ke akhir) maupun mundur (dari akhir ke awal) dengan mudah. Fungsi utama program adalah menampilkan seluruh petak, mencari petak berdasarkan nama, mensimulasikan pergerakan pemain (dengan melewati petak terakhir dan kembali ke GO seperti pada papan melingkar), serta menyediakan menu interaktif bagi pengguna. Algoritma DLL dipilih karena sifatnya yang dinamis dan efisien untuk operasi penyisipan di akhir serta navigasi dua arah, yang sesuai dengan kebutuhan papan Monopoli yang linear namun dapat dianggap melingkar saat pergerakan.
+
+# Source Code
+
+
+
+
+
+
+
+
+
+
+
+Program dimulai dengan mendefinisikan kelas Node yang memiliki atribut data (nama petak), prev (pointer ke node sebelumnya), dan next (pointer ke node berikutnya). Kemudian kelas DoublyLinkedList dibuat dengan atribut start (node pertama) dan rear (node terakhir). Metode create_new_node(n) hanya membungkus pembuatan objek Node baru. Metode insert_node(new_node) menambahkan node ke akhir DLL: jika list kosong, start dan rear menunjuk ke node baru; jika tidak, node baru dihubungkan dengan rear yang ada, lalu rear diperbarui.
+
+Metode traverse_forward() dan traverse_backward() masing-masing mencetak semua data dari start ke rear (menggunakan next) dan dari rear ke start (menggunakan prev). Metode cari_petak(nama) melakukan pencarian case‑insensitive (hanya cocok sebagian karena menggunakan in) dan mengembalikan node beserta posisinya (1-index). tampilkan_semua() mencetak semua petak bernomor secara rapi.
+
+Metode gerak_pemain(posisi_awal, langkah) menghitung total node, lalu posisi baru = (posisi_awal - 1 + langkah) % total + 1 (formula modular untuk papan melingkar). Kemudian ia melintasi list dari start hingga mencapai node pada posisi baru, lalu mengembalikan posisi dan data node tersebut.
+
+Di fungsi main(), objek DLL dibuat dan diisi dengan 40 petak Monopoli standar (daftar petak_monopoli) menggunakan perulangan for. Setelah itu, program memasuki menu interaktif while True yang menawarkan 6 pilihan. Setiap pilihan memanggil metode DLL yang sesuai, menangani input pengguna, dan menampilkan hasil. Pilihan 6 akan menghentikan program. Jika pengguna memasukkan angka di luar 1-6, program akan menjalankan traversal maju sebagai default.
+
+# Output Program

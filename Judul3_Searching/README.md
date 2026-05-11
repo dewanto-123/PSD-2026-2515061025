@@ -18,3 +18,4 @@ Dua baris terakhir program, yaitu if __name__ == "__main__": diikuti main(), ber
 Output program menunjukkan bahwa pengguna memasukkan nama Dewanto sebagai target pencarian. Karena daftar mahasiswa sudah terurut berdasarkan nama, algoritma binary search bekerja dengan membagi daftar dan memeriksa elemen tengah. Pada prosesnya, program mencetak Mengecek: Dewanto yang berarti nama tersebut sedang diperiksa dan langsung cocok dengan target. Setelah ditemukan, program menampilkan Dewanto ditemukan dengan NIM 231401004 sesuai dengan data yang tersimpan, lalu proses selesai tanpa error. Ini membuktikan bahwa binary search berhasil menemukan data dengan cepat.
 
 # Link YouTube
+https://youtu.be/WhCkadW0g5I

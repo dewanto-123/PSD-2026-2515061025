@@ -18,6 +18,7 @@ Metode lihat_antrian() digunakan untuk menampilkan seluruh pasien yang sedang me
 
 Fungsi main() merupakan program utama yang pertama kali membuat objek rs dari kelas QueueRumahSakit. Di dalam perulangan while True, program menampilkan menu utama yang terdiri dari empat pilihan, yaitu (1) Ambil Antrian, (2) Layani Pasien, (3) Lihat Antrian, dan (4) Keluar Program. Pengguna diminta memasukkan pilihan melalui input(). Jika pilihan adalah “1”, program meminta nama pasien lalu memanggil metode ambil_antrian(nama). Jika pilihan “2”, dipanggil layani_pasien(). Jika pilihan “3”, dipanggil lihat_antrian(). Jika pilihan “4”, program mencetak pesan “Program selesai. Terima kasih!” lalu keluar dari perulangan dengan break. Apabila input tidak sesuai dengan pilihan 1–4, program mencetak “Pilihan tidak valid”. Terakhir, di luar fungsi main(), terdapat blok if __name__ == "__main__": yang memastikan fungsi main() hanya dijalankan ketika file dieksekusi secara langsung, bukan ketika diimpor sebagai modul.
 
+# Output Program
 <img width="336" height="617" alt="Screenshot 2026-05-19 224918" src="https://github.com/user-attachments/assets/282a9456-e70d-4f94-b07f-2b743a85b319" />
 <img width="352" height="452" alt="Screenshot 2026-05-19 224936" src="https://github.com/user-attachments/assets/12f4cb6b-8abf-41f7-9c53-3bb6e3bb03fe" />
 

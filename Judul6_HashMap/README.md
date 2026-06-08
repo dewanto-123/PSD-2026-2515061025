@@ -53,3 +53,4 @@ Selanjutnya program melakukan pencarian kata "hashmap". Karena kata tersebut ter
 Setelah itu, program menjalankan proses penghapusan terhadap kata "array". Setelah data dihapus, isi Hash Table ditampilkan kembali. Pada tampilan kedua, kata "array" sudah tidak muncul lagi di bucket sebelumnya. Hal ini menunjukkan bahwa fungsi remove_key() berhasil menghapus data dari HashMap.
 
 # Link YouTube
+https://youtu.be/uZzSgCD38gE
